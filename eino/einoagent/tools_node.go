@@ -11,6 +11,9 @@ type ToolImpl struct {
 	config *ToolConfig
 }
 
+// 实现接口
+var _ tool.BaseTool = (*ToolImpl)(nil)
+
 type ToolConfig struct {
 }
 
@@ -25,6 +28,10 @@ func (impl *ToolImpl) Info(ctx context.Context) (*schema.ToolInfo, error) {
 	panic("implement me")
 }
 
-func (impl *ToolImpl) StreamableRun(ctx context.Context, input argumentsInJSON, opts tool.Option) (schema.StreamReader[string], error) {
-	panic("implement me")
+// func (impl *ToolImpl) StreamableRun(ctx context.Context, input argumentsInJSON, opts tool.Option) (schema.StreamReader[string], error) {
+// 	panic("implement me")
+// }
+
+func GetTools() ([]tool.BaseTool, error) {
+	return nil, nil
 }
