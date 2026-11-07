@@ -1,0 +1,14 @@
+{
+  "name": "EinoAgent",
+  "node_trigger_mode": "AnyPredecessor",
+  "input_type": {
+    "title": "*UserMessage"
+  },
+  "output_type": {
+    "title": "*schema.Message",
+    "description": "github.com/cloudwego/eino/schema"
+  },
+  "gen_local_state": {},
+  "id": "1uNNMo",
+  "component": "Graph"
+}

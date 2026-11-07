@@ -8,7 +8,15 @@ import (
 )
 
 func init() {
+
 	if err := godotenv.Load(); err != nil {
+
+		wd, err := os.Getwd()
+		if err != nil {
+			log.Printf("get current working directory failed, err=%v", err)
+		} else {
+			log.Printf("[env] current working directory: %s", wd)
+		}
 		log.Fatalf("load .env file failed, err=%v", err)
 	}
 }
