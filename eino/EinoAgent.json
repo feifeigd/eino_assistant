@@ -10,5 +10,116 @@
   },
   "gen_local_state": {},
   "id": "1uNNMo",
-  "component": "Graph"
+  "component": "Graph",
+  "nodes": [
+    {
+      "id": "start",
+      "key": "start",
+      "name": "Start",
+      "type": "start",
+      "layoutData": {
+        "position": {
+          "x": -213,
+          "y": 65
+        }
+      }
+    },
+    {
+      "id": "end",
+      "key": "end",
+      "name": "End",
+      "type": "end",
+      "layoutData": {
+        "position": {
+          "x": 400,
+          "y": 0
+        }
+      }
+    },
+    {
+      "id": "H6x0Ma",
+      "key": "InputToHistory",
+      "name": "",
+      "type": "Lambda",
+      "component_schema": {
+        "name": "Lambda",
+        "component": "Lambda",
+        "component_source": "custom",
+        "input_type": {
+          "title": "any",
+          "description": ""
+        },
+        "output_type": {
+          "title": "any",
+          "description": ""
+        },
+        "extra_property": {
+          "schema": {
+            "type": "object",
+            "description": "",
+            "properties": {
+              "has_option": {
+                "type": "boolean",
+                "description": ""
+              },
+              "interaction_type": {
+                "type": "string",
+                "description": "",
+                "enum": [
+                  "invoke",
+                  "stream",
+                  "collect",
+                  "transform"
+                ]
+              },
+              "option_package_path": {
+                "type": "string",
+                "description": ""
+              },
+              "option_type_name": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "required": [
+              "interaction_type",
+              "has_option"
+            ]
+          },
+          "extra_property_input": "{\"interaction_type\":\"invoke\"}"
+        },
+        "is_io_type_mutable": true,
+        "version": "1.0.0"
+      },
+      "node_option": {},
+      "layoutData": {
+        "position": {
+          "x": 0,
+          "y": -167
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "",
+      "name": "",
+      "sourceWorkflowNodeId": "start",
+      "targetWorkflowNodeId": "end",
+      "source_node_key": "start",
+      "target_node_key": "end"
+    },
+    {
+      "id": "",
+      "name": "",
+      "sourceWorkflowNodeId": "start",
+      "targetWorkflowNodeId": "H6x0Ma",
+      "source_node_key": "start",
+      "target_node_key": "InputToHistory"
+    }
+  ],
+  "branches": [],
+  "nodeCounter": {
+    "Lambda": 2
+  }
 }
