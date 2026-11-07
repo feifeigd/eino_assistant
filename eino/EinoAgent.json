@@ -31,8 +31,8 @@
       "type": "end",
       "layoutData": {
         "position": {
-          "x": 400,
-          "y": 0
+          "x": 562,
+          "y": -135
         }
       }
     },
@@ -169,6 +169,69 @@
           "y": -158
         }
       }
+    },
+    {
+      "id": "t9Sn6Q",
+      "key": "InputToQuery",
+      "name": "",
+      "type": "Lambda",
+      "component_schema": {
+        "name": "Lambda",
+        "component": "Lambda",
+        "component_source": "custom",
+        "input_type": {
+          "title": "*UserMessage",
+          "description": ""
+        },
+        "output_type": {
+          "title": "string",
+          "description": ""
+        },
+        "extra_property": {
+          "schema": {
+            "type": "object",
+            "description": "",
+            "properties": {
+              "has_option": {
+                "type": "boolean",
+                "description": ""
+              },
+              "interaction_type": {
+                "type": "string",
+                "description": "",
+                "enum": [
+                  "invoke",
+                  "stream",
+                  "collect",
+                  "transform"
+                ]
+              },
+              "option_package_path": {
+                "type": "string",
+                "description": ""
+              },
+              "option_type_name": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "required": [
+              "interaction_type",
+              "has_option"
+            ]
+          },
+          "extra_property_input": "{\"interaction_type\":\"invoke\",\"has_option\":true}"
+        },
+        "is_io_type_mutable": true,
+        "version": "1.0.0"
+      },
+      "node_option": {},
+      "layoutData": {
+        "position": {
+          "x": 38.5,
+          "y": 101.5
+        }
+      }
     }
   ],
   "edges": [
@@ -176,17 +239,25 @@
       "id": "",
       "name": "",
       "sourceWorkflowNodeId": "start",
-      "targetWorkflowNodeId": "end",
+      "targetWorkflowNodeId": "H6x0Ma",
       "source_node_key": "start",
-      "target_node_key": "end"
+      "target_node_key": "InputToHistory"
     },
     {
       "id": "",
       "name": "",
       "sourceWorkflowNodeId": "start",
-      "targetWorkflowNodeId": "H6x0Ma",
+      "targetWorkflowNodeId": "t9Sn6Q",
       "source_node_key": "start",
-      "target_node_key": "InputToHistory"
+      "target_node_key": "InputToQuery"
+    },
+    {
+      "id": "",
+      "name": "",
+      "sourceWorkflowNodeId": "Zl2dTi",
+      "targetWorkflowNodeId": "end",
+      "source_node_key": "ChatTemplate",
+      "target_node_key": "end"
     },
     {
       "id": "",
@@ -199,7 +270,7 @@
   ],
   "branches": [],
   "nodeCounter": {
-    "Lambda": 2,
+    "Lambda": 3,
     "ChatTemplate": 2
   }
 }

@@ -11,6 +11,7 @@ func BuildEinoAgent(ctx context.Context) (r compose.Runnable[*UserMessage, *sche
 	const (
 		InputToHistory = "InputToHistory"
 		ChatTemplate   = "ChatTemplate"
+		InputToQuery   = "InputToQuery"
 	)
 	g := compose.NewGraph[*UserMessage, *schema.Message]()
 	_ = g.AddLambdaNode(InputToHistory, compose.InvokableLambdaWithOption(newLambda))
@@ -19,8 +20,10 @@ func BuildEinoAgent(ctx context.Context) (r compose.Runnable[*UserMessage, *sche
 		return nil, err
 	}
 	_ = g.AddChatTemplateNode(ChatTemplate, chatTemplateKeyOfChatTemplate)
-	_ = g.AddEdge(compose.START, compose.END)
+	_ = g.AddLambdaNode(InputToQuery, compose.InvokableLambdaWithOption(newLambda1))
 	_ = g.AddEdge(compose.START, InputToHistory)
+	_ = g.AddEdge(compose.START, InputToQuery)
+	_ = g.AddEdge(ChatTemplate, compose.END)
 	_ = g.AddEdge(InputToHistory, ChatTemplate)
 	r, err = g.Compile(ctx, compose.WithGraphName("EinoAgent"), compose.WithNodeTriggerMode(compose.AnyPredecessor))
 	if err != nil {
