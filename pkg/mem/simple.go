@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strings"
 	"sync"
 
 	"github.com/cloudwego/eino/schema"
@@ -89,6 +90,36 @@ func (m *SimpleMemory) GetConveration(id string, createIfNotExist bool) *Convers
 	con.load()
 	m.conversations[id] = con
 	return con
+}
+
+func (m *SimpleMemory) ListConversations() []string {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+
+	files, err := os.ReadDir(m.dir)
+	if err != nil {
+		return nil
+	}
+	ids := make([]string, 0, len(files))
+	for _, file := range files {
+		if file.IsDir() {
+			continue
+		}
+		ids = append(ids, strings.TrimSuffix(file.Name(), "jsonl"))
+	}
+	return ids
+}
+
+func (m *SimpleMemory) DeleteConversation(id string) error {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+
+	filePath := filepath.Join(m.dir, id+".jsonl")
+	if err := os.Remove(filePath); err != nil {
+		return fmt.Errorf("failed to delete file: %w", err)
+	}
+	delete(m.conversations, id)
+	return nil
 }
 
 func (c *Conversation) Append(msg *schema.Message) {
