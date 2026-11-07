@@ -20,7 +20,7 @@ func newLambda2(ctx context.Context) (lba *compose.Lambda, err error) {
 	}
 	config.Model = chatModelIns11
 
-	tools, err := GetTools()
+	tools, err := GetTools(ctx)
 	if err != nil {
 		return nil, err
 	}

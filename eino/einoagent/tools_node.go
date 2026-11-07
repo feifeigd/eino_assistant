@@ -3,6 +3,7 @@ package einoagent
 import (
 	"context"
 
+	"eino_assistant/pkg/tool/einotool"
 	"github.com/cloudwego/eino/components/tool"
 	"github.com/cloudwego/eino/schema"
 )
@@ -32,6 +33,16 @@ func (impl *ToolImpl) Info(ctx context.Context) (*schema.ToolInfo, error) {
 // 	panic("implement me")
 // }
 
-func GetTools() ([]tool.BaseTool, error) {
-	return nil, nil
+func GetTools(ctx context.Context) ([]tool.BaseTool, error) {
+	einoAssistantTool, err := newEinoAssistantTool(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return []tool.BaseTool{
+		einoAssistantTool,
+	}, nil
+}
+
+func newEinoAssistantTool(ctx context.Context) (tool.BaseTool, error) {
+	return einotool.NewEinoAssistantTool(ctx, nil)
 }
