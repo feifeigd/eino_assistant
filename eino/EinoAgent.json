@@ -20,7 +20,7 @@
       "layoutData": {
         "position": {
           "x": 80,
-          "y": 428.65
+          "y": 325.55
         }
       }
     },
@@ -95,7 +95,7 @@
       "layoutData": {
         "position": {
           "x": 375,
-          "y": 176.8
+          "y": 15.2
         }
       }
     },
@@ -166,7 +166,7 @@
       "layoutData": {
         "position": {
           "x": 705,
-          "y": 221.8
+          "y": 60.2
         }
       }
     },
@@ -229,7 +229,7 @@
       "layoutData": {
         "position": {
           "x": 375,
-          "y": 512
+          "y": 350.4
         }
       }
     },
@@ -576,250 +576,6 @@
             "required": true,
             "component_items": [
               {
-                "name": "duckduckgo",
-                "component": "Tool",
-                "component_source": "official",
-                "identifier": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                "input_type": {
-                  "title": "string",
-                  "description": ""
-                },
-                "output_type": {
-                  "title": "string",
-                  "description": ""
-                },
-                "config": {
-                  "description": "github.com/cloudwego/eino-ext/blob/main/components/tool/duckduckgo/search.go",
-                  "schema": {
-                    "type": "object",
-                    "description": "",
-                    "properties": {
-                      "DDGConfig": {
-                        "type": "object",
-                        "description": "",
-                        "properties": {
-                          "Cache": {
-                            "type": "boolean",
-                            "description": "",
-                            "goDefinition": {
-                              "libraryRef": {
-                                "version": "",
-                                "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                                "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                              },
-                              "typeName": "bool",
-                              "kind": "bool",
-                              "isPtr": false
-                            }
-                          },
-                          "Headers": {
-                            "type": "object",
-                            "description": "",
-                            "additionalProperties": {
-                              "type": "string",
-                              "description": "",
-                              "goDefinition": {
-                                "libraryRef": {
-                                  "version": "",
-                                  "module": "",
-                                  "pkgPath": ""
-                                },
-                                "typeName": "string",
-                                "kind": "string",
-                                "isPtr": false
-                              }
-                            },
-                            "goDefinition": {
-                              "libraryRef": {
-                                "version": "",
-                                "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                                "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                              },
-                              "typeName": "map[string]string",
-                              "kind": "map",
-                              "isPtr": false
-                            }
-                          },
-                          "MaxRetries": {
-                            "type": "number",
-                            "description": "",
-                            "goDefinition": {
-                              "libraryRef": {
-                                "version": "",
-                                "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                                "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                              },
-                              "typeName": "int",
-                              "kind": "int",
-                              "isPtr": false
-                            }
-                          },
-                          "Proxy": {
-                            "type": "string",
-                            "description": "",
-                            "goDefinition": {
-                              "libraryRef": {
-                                "version": "",
-                                "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                                "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                              },
-                              "typeName": "string",
-                              "kind": "string",
-                              "isPtr": false
-                            }
-                          },
-                          "Timeout": {
-                            "type": "number",
-                            "description": "",
-                            "goDefinition": {
-                              "libraryRef": {
-                                "version": "",
-                                "module": "time",
-                                "pkgPath": "time"
-                              },
-                              "typeName": "time.Duration",
-                              "kind": "int64",
-                              "isPtr": false
-                            }
-                          }
-                        },
-                        "propertyOrder": [
-                          "Headers",
-                          "Proxy",
-                          "Timeout",
-                          "Cache",
-                          "MaxRetries"
-                        ],
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                            "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                          },
-                          "typeName": "ddgsearch.Config",
-                          "kind": "struct",
-                          "isPtr": true
-                        }
-                      },
-                      "MaxResults": {
-                        "type": "number",
-                        "description": "",
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "",
-                            "pkgPath": ""
-                          },
-                          "typeName": "int",
-                          "kind": "int",
-                          "isPtr": false
-                        }
-                      },
-                      "Region": {
-                        "type": "string",
-                        "description": "",
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                            "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                          },
-                          "typeName": "ddgsearch.Region",
-                          "kind": "string",
-                          "isPtr": false
-                        }
-                      },
-                      "SafeSearch": {
-                        "type": "string",
-                        "description": "",
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                            "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                          },
-                          "typeName": "ddgsearch.SafeSearch",
-                          "kind": "string",
-                          "isPtr": false
-                        }
-                      },
-                      "TimeRange": {
-                        "type": "string",
-                        "description": "",
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "github.com/cloudwego/eino-ext/components/tool/duckduckgo",
-                            "pkgPath": "github.com/cloudwego/eino-ext/components/tool/duckduckgo/ddgsearch"
-                          },
-                          "typeName": "ddgsearch.TimeRange",
-                          "kind": "string",
-                          "isPtr": false
-                        }
-                      },
-                      "ToolDesc": {
-                        "type": "string",
-                        "description": "",
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "",
-                            "pkgPath": ""
-                          },
-                          "typeName": "string",
-                          "kind": "string",
-                          "isPtr": false
-                        }
-                      },
-                      "ToolName": {
-                        "type": "string",
-                        "description": "",
-                        "goDefinition": {
-                          "libraryRef": {
-                            "version": "",
-                            "module": "",
-                            "pkgPath": ""
-                          },
-                          "typeName": "string",
-                          "kind": "string",
-                          "isPtr": false
-                        }
-                      }
-                    },
-                    "propertyOrder": [
-                      "ToolName",
-                      "ToolDesc",
-                      "Region",
-                      "MaxResults",
-                      "SafeSearch",
-                      "TimeRange",
-                      "DDGConfig"
-                    ],
-                    "goDefinition": {
-                      "libraryRef": {
-                        "version": "",
-                        "module": "",
-                        "pkgPath": ""
-                      },
-                      "typeName": "duckduckgo.Config",
-                      "kind": "struct",
-                      "isPtr": false
-                    }
-                  },
-                  "config_input": ""
-                },
-                "is_io_type_mutable": false,
-                "version": "1.0.0",
-                "id": "w0c8jt",
-                "layoutData": {
-                  "isSlotNode": true,
-                  "position": {
-                    "x": 1365,
-                    "y": 385.9
-                  }
-                }
-              },
-              {
                 "name": "Tool",
                 "component": "Tool",
                 "component_source": "custom",
@@ -841,7 +597,7 @@
                       "interaction_type"
                     ]
                   },
-                  "extra_property_input": "{\"interaction_type\":\"invoke\"}"
+                  "extra_property_input": "{\"interaction_type\":\"stream\"}"
                 },
                 "is_io_type_mutable": false,
                 "version": "1.0.0",
@@ -850,9 +606,11 @@
                   "isSlotNode": true,
                   "position": {
                     "x": 1365,
-                    "y": 579.1
+                    "y": 385.9
                   }
-                }
+                },
+                "input_type": {},
+                "output_type": {}
               }
             ],
             "go_definition": {
@@ -940,7 +698,7 @@
       "layoutData": {
         "position": {
           "x": 1035,
-          "y": 223.8
+          "y": 97.2
         }
       }
     },
@@ -1131,7 +889,7 @@
                   "isSlotNode": true,
                   "position": {
                     "x": 1035,
-                    "y": 580
+                    "y": 408.4
                   }
                 }
               }
@@ -1281,7 +1039,7 @@
       "layoutData": {
         "position": {
           "x": 705,
-          "y": 542
+          "y": 380.4
         }
       }
     }
@@ -1351,6 +1109,6 @@
     "ChatModel": 3,
     "Tool": 2,
     "Retriever": 2,
-    "default": 2
+    "default": 3
   }
 }
