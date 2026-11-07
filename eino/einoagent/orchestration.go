@@ -13,7 +13,7 @@ func BuildEinoAgent(ctx context.Context) (r compose.Runnable[*UserMessage, *sche
 		ChatTemplate   = "ChatTemplate"
 	)
 	g := compose.NewGraph[*UserMessage, *schema.Message]()
-	_ = g.AddLambdaNode(InputToHistory, compose.InvokableLambda(newLambda))
+	_ = g.AddLambdaNode(InputToHistory, compose.InvokableLambdaWithOption(newLambda))
 	chatTemplateKeyOfChatTemplate, err := newChatTemplate(ctx)
 	if err != nil {
 		return nil, err

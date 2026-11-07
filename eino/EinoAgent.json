@@ -50,7 +50,7 @@
           "description": ""
         },
         "output_type": {
-          "title": "any",
+          "title": "map[string]any",
           "description": ""
         },
         "extra_property": {
@@ -86,7 +86,7 @@
               "has_option"
             ]
           },
-          "extra_property_input": "{\"interaction_type\":\"invoke\"}"
+          "extra_property_input": "{\"interaction_type\":\"invoke\",\"has_option\":true}"
         },
         "is_io_type_mutable": true,
         "version": "1.0.0"
