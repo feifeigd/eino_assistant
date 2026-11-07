@@ -46,7 +46,7 @@
         "component": "Lambda",
         "component_source": "custom",
         "input_type": {
-          "title": "any",
+          "title": "*UserMessage",
           "description": ""
         },
         "output_type": {
@@ -98,6 +98,77 @@
           "y": -167
         }
       }
+    },
+    {
+      "id": "Zl2dTi",
+      "key": "ChatTemplate",
+      "name": "",
+      "type": "ChatTemplate",
+      "component_schema": {
+        "name": "chatTemplate",
+        "component": "ChatTemplate",
+        "component_source": "official",
+        "identifier": "github.com/cloudwego/eino/components/prompt",
+        "input_type": {
+          "title": "map[string]any",
+          "description": ""
+        },
+        "output_type": {
+          "title": "[]*schema.Message",
+          "description": ""
+        },
+        "config": {
+          "description": "github.com/cloudwego/eino/blob/main/components/prompt/chat_template.go",
+          "schema": {
+            "type": "object",
+            "description": "",
+            "properties": {
+              "FormatType": {
+                "type": "number",
+                "description": "",
+                "enum": [
+                  "0",
+                  "1",
+                  "2"
+                ],
+                "goDefinition": {
+                  "libraryRef": {
+                    "version": "",
+                    "module": "",
+                    "pkgPath": ""
+                  },
+                  "typeName": "schema.FormatType",
+                  "kind": "uint8",
+                  "isPtr": false
+                }
+              }
+            },
+            "propertyOrder": [
+              "FormatType"
+            ],
+            "goDefinition": {
+              "libraryRef": {
+                "version": "",
+                "module": "",
+                "pkgPath": ""
+              },
+              "typeName": "Config",
+              "kind": "struct",
+              "isPtr": false
+            }
+          },
+          "config_input": "{}"
+        },
+        "is_io_type_mutable": false,
+        "version": "1.0.0"
+      },
+      "node_option": {},
+      "layoutData": {
+        "position": {
+          "x": 275,
+          "y": -158
+        }
+      }
     }
   ],
   "edges": [
@@ -116,10 +187,19 @@
       "targetWorkflowNodeId": "H6x0Ma",
       "source_node_key": "start",
       "target_node_key": "InputToHistory"
+    },
+    {
+      "id": "",
+      "name": "",
+      "sourceWorkflowNodeId": "H6x0Ma",
+      "targetWorkflowNodeId": "Zl2dTi",
+      "source_node_key": "InputToHistory",
+      "target_node_key": "ChatTemplate"
     }
   ],
   "branches": [],
   "nodeCounter": {
-    "Lambda": 2
+    "Lambda": 2,
+    "ChatTemplate": 2
   }
 }
