@@ -40,7 +40,7 @@ func BuildEinoAgent(ctx context.Context) (r compose.Runnable[*UserMessage, *sche
 	_ = g.AddEdge(RedisRetriever, ChatTemplate)
 	_ = g.AddEdge(ChatTemplate, ReactAgent)
 	_ = g.AddEdge(InputToQuery, RedisRetriever)
-	r, err = g.Compile(ctx, compose.WithGraphName("EinoAgent"), compose.WithNodeTriggerMode(compose.AnyPredecessor))
+	r, err = g.Compile(ctx, compose.WithGraphName("EinoAgent"), compose.WithNodeTriggerMode(compose.AllPredecessor))
 	if err != nil {
 		return nil, err
 	}

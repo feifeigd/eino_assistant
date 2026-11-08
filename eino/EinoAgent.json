@@ -1,12 +1,11 @@
 {
   "name": "EinoAgent",
-  "node_trigger_mode": "AnyPredecessor",
+  "node_trigger_mode": "AllPredecessor",
   "input_type": {
     "title": "*UserMessage"
   },
   "output_type": {
-    "title": "*schema.Message",
-    "description": "github.com/cloudwego/eino/schema"
+    "title": "*schema.Message"
   },
   "gen_local_state": {},
   "id": "1uNNMo",
