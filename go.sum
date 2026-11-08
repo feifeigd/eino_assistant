@@ -43,8 +43,14 @@ github.com/cloudwego/eino-ext/callbacks/cozeloop v0.3.1 h1:NBjFMD8Ok3TqLr7iWBPRk
 github.com/cloudwego/eino-ext/callbacks/cozeloop v0.3.1/go.mod h1:/biyKmCroUH3Y6fG2sBBiZyUmzwRhb3YKAsORGwxk1g=
 github.com/cloudwego/eino-ext/callbacks/langfuse v0.1.3 h1:1+umC5ExA9kDujqWxZLyQ7XFQkpX6OtX7C+TD8M8f48=
 github.com/cloudwego/eino-ext/callbacks/langfuse v0.1.3/go.mod h1:72GthSvIo7tDE2NIihJlakra8ueUHW83tD+imVAGeV4=
+github.com/cloudwego/eino-ext/components/document/loader/file v0.0.0-20261019121619-eee37f63ff95 h1:E3wXETmfxOx5ABZGfk2awolyHUKN8PFAfM1SGYqLQI4=
+github.com/cloudwego/eino-ext/components/document/loader/file v0.0.0-20261019121619-eee37f63ff95/go.mod h1:HnxTQxmhuev6zaBl92EHUy/vEDWCuoE/OE4cTiF5JCg=
+github.com/cloudwego/eino-ext/components/document/transformer/splitter/markdown v0.0.0-20261019121619-eee37f63ff95 h1:c+CNPv6YE1cKnwcw8U099/Aw62vz2hpHLQNH29SYC9g=
+github.com/cloudwego/eino-ext/components/document/transformer/splitter/markdown v0.0.0-20261019121619-eee37f63ff95/go.mod h1:KVOVct4e2BQ7epDONW2QE1qU5+ccoh91FzJTs9vIJj0=
 github.com/cloudwego/eino-ext/components/embedding/ark v0.1.2 h1:mc+dFLiF8t0C0upuN/X07nCGrcGK1MlAKxrXZye1BW4=
 github.com/cloudwego/eino-ext/components/embedding/ark v0.1.2/go.mod h1:sCcJvvx3/qb95LlvacRBt6YuvYkLGssaP7of3GzRrow=
+github.com/cloudwego/eino-ext/components/indexer/redis v0.0.0-20261019121619-eee37f63ff95 h1:ICIfl5j1EsHVIFuWe7dgbD0uMrn705dTmLUWwO7gH08=
+github.com/cloudwego/eino-ext/components/indexer/redis v0.0.0-20261019121619-eee37f63ff95/go.mod h1:yx19qVmk970TjutWgNwlLcaRkrTR0fEHKecLkJGcxoA=
 github.com/cloudwego/eino-ext/components/model/ark v0.1.71 h1:PAVFOynek5hVNh8CaDUL5URuADHrvW/yKlP4BJzPPnc=
 github.com/cloudwego/eino-ext/components/model/ark v0.1.71/go.mod h1:JiV6f4ZJ9enLUMN+s3DxuT4xwCO//SfNcr0Kn2v9aBE=
 github.com/cloudwego/eino-ext/components/retriever/redis v0.0.0-20261019121619-eee37f63ff95 h1:oiQ6GZfCEU/MAE/IyOCdE7IuLuNngv90Byj/TYeTVZ4=

@@ -7,7 +7,10 @@ require (
 	github.com/cloudwego/eino-ext/callbacks/apmplus v0.0.2
 	github.com/cloudwego/eino-ext/callbacks/cozeloop v0.3.1
 	github.com/cloudwego/eino-ext/callbacks/langfuse v0.1.3
+	github.com/cloudwego/eino-ext/components/document/loader/file v0.0.0-20261019121619-eee37f63ff95
+	github.com/cloudwego/eino-ext/components/document/transformer/splitter/markdown v0.0.0-20261019121619-eee37f63ff95
 	github.com/cloudwego/eino-ext/components/embedding/ark v0.1.2
+	github.com/cloudwego/eino-ext/components/indexer/redis v0.0.0-20261019121619-eee37f63ff95
 	github.com/cloudwego/eino-ext/components/model/ark v0.1.71
 	github.com/cloudwego/eino-ext/components/retriever/redis v0.0.0-20261019121619-eee37f63ff95
 	github.com/cloudwego/eino-ext/devops v0.1.9
