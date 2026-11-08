@@ -1080,6 +1080,14 @@
     {
       "id": "",
       "name": "",
+      "sourceWorkflowNodeId": "utHuXx",
+      "targetWorkflowNodeId": "Zl2dTi",
+      "source_node_key": "RedisRetriever",
+      "target_node_key": "ChatTemplate"
+    },
+    {
+      "id": "",
+      "name": "",
       "sourceWorkflowNodeId": "Zl2dTi",
       "targetWorkflowNodeId": "zGel8k",
       "source_node_key": "ChatTemplate",
@@ -1092,14 +1100,6 @@
       "targetWorkflowNodeId": "utHuXx",
       "source_node_key": "InputToQuery",
       "target_node_key": "RedisRetriever"
-    },
-    {
-      "id": "",
-      "name": "",
-      "sourceWorkflowNodeId": "utHuXx",
-      "targetWorkflowNodeId": "zGel8k",
-      "source_node_key": "RedisRetriever",
-      "target_node_key": "ReactAgent"
     }
   ],
   "branches": [],

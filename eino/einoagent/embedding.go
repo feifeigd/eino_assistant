@@ -11,11 +11,13 @@ import (
 func newEmbedding(ctx context.Context) (eb embedding.Embedder, err error) {
 	// TODO Modify component configuration here.
 	apiType := ark.APITypeMultiModal
+	dimensions := 2048
 	config := &ark.EmbeddingConfig{
-		BaseURL: "https://ark.cn-beijing.volces.com/api/v3",
-		Model:   os.Getenv("ARK_EMBEDDING_MODEL"),
-		APIKey:  os.Getenv("ARK_API_KEY"),
-		APIType: &apiType,
+		BaseURL:    "https://ark.cn-beijing.volces.com/api/v3",
+		Model:      os.Getenv("ARK_EMBEDDING_MODEL"),
+		APIKey:     os.Getenv("ARK_API_KEY"),
+		APIType:    &apiType,
+		Dimensions: &dimensions,
 	}
 	eb, err = ark.NewEmbedder(ctx, config)
 	if err != nil {

@@ -66,7 +66,7 @@ func (m *SimpleMemory) GetConveration(id string, createIfNotExist bool) *Convers
 		return con
 	}
 
-	filePath := filepath.Join(m.dir, id, ".jsonl")
+	filePath := filepath.Join(m.dir, id+".jsonl")
 	if _, err := os.Stat(filePath); os.IsNotExist(err) {
 
 		if createIfNotExist {
